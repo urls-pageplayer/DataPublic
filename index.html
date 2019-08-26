@@ -18,7 +18,7 @@
 	    
 	setInterval(function() { tick = new Date() - start;
 			      
-			      
+			      try {
 			      document.getElementsByTagName('body')[0].innerHTML += tick + " = " + tick.getSeconds() + "<br />";
 			      
 			      if ( tick.getSeconds() > 30 ) {
@@ -28,7 +28,7 @@
 			      
 			      }, 5000);
 	    
-	    
+			       } catch(xcp) { document.getElementsByTagName('body')[0].innerHTML += xcp.toString(); };
 	    
 	    
     </script>
