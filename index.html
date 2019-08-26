@@ -13,10 +13,11 @@
 //setTimeout(function() { location.reload(true); }, 15000);
 	    
 	var start = new Date();
+	 
 	    
-        var tick = new Date();
-	    
-	setInterval(function() { tick = new Date() - start;
+	setInterval(function() {
+		
+		tick = newDate(new Date() - start);
 			      
               try {
 			 document.getElementsByTagName('body')[0].innerHTML += tick + " = " + tick.getSeconds() + "<br />";
