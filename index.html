@@ -17,7 +17,7 @@
 	    
 	setInterval(function() {
 		
-		tick = newDate(new Date() - start);
+		tick = new Date(new Date() - start);
 			      
               try {
 			 document.getElementsByTagName('body')[0].innerHTML += tick + " = " + tick.getSeconds() + "<br />";
