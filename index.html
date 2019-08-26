@@ -18,17 +18,20 @@
 	    
 	setInterval(function() { tick = new Date() - start;
 			      
-			      try {
-			      document.getElementsByTagName('body')[0].innerHTML += tick + " = " + tick.getSeconds() + "<br />";
+              try {
+			 document.getElementsByTagName('body')[0].innerHTML += tick + " = " + tick.getSeconds() + "<br />";
 			      
 			      if ( tick.getSeconds() > 30 ) {
 			      
 			      document.getElementsByTagName('body')[0].innerHTML += "passed!";
 			      };
 			      
+		 
+               } catch(xcp) { document.getElementsByTagName('body')[0].innerHTML += xcp.toString(); };     
+		      
+		      
 			      }, 5000);
 	    
-			       } catch(xcp) { document.getElementsByTagName('body')[0].innerHTML += xcp.toString(); };
 	    
 	    
     </script>
