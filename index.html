@@ -16,10 +16,10 @@
 	    
         var tick;
 	    
-	setTimeout(function() { tick = new Date();
+	setTimeout(function() { tick = new Date() - start;
 			      
 			      
-			      document.body.innerHTML += tick + "<br />”;
+			      document.getElementByTagName('body')[0].innerHTML += tick + "<br />”;
 			      
 			      
 			      }, 15000);
