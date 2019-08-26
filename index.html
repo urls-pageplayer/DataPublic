@@ -19,9 +19,9 @@
 	setInterval(function() { tick = new Date() - start;
 			      
 			      
-			      document.getElementsByTagName('body')[0].innerHTML += tick + "<br />";
+			      document.getElementsByTagName('body')[0].innerHTML += tick + " = " + tick.getSeconds() + "<br />";
 			      
-			      if ( tick.getSeconds()  > 30 ) {
+			      if ( tick.getSeconds() > 30 ) {
 			      
 			      document.getElementsByTagName('body')[0].innerHTML += "passed!";
 			      };
