@@ -11,7 +11,9 @@
     <script type="text/javascript">     
           
 //setTimeout(function() { location.reload(true); }, 15000);
+	
 	    
+	    /*
 	var start = new Date();
 	 
 	    
@@ -32,7 +34,18 @@
 		      
 		      
 			      }, 5000);
-	    
+	    */
+	
+var sensor = new Gyroscope();
+sensor.start();
+
+sensor.onreading = function(x,y,z) {
+    alert("Angular velocity around the X-axis " + sensor.x);
+    alert("Angular velocity around the Y-axis " + sensor.y);
+    alert("Angular velocity around the Z-axis " + sensor.z);
+};
+
+sensor.onerror = function(event) { alert(event.error.name, event.error.message); }
 	    
 	    
     </script>
