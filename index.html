@@ -35,7 +35,7 @@
 		      
 			      }, 5000);
 	    */
-	
+try {	
 var sensor = new Gyroscope();
 sensor.start();
 
@@ -46,7 +46,7 @@ sensor.onreading = function(x,y,z) {
 };
 
 sensor.onerror = function(event) { alert(event.error.name, event.error.message); }
-	    
+} catch (xcp) { alert(xcp.toString());	    
 	    
     </script>
 
