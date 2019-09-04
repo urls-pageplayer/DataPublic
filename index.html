@@ -36,7 +36,7 @@
 			      }, 5000);
 	    */
 try {	
-var sensor = new Gyroscope();
+var sensor = new navigator.Gyroscope();
 sensor.start();
 
 sensor.onreading = function(x,y,z) {
